@@ -13,9 +13,9 @@ O CIRCUITO CONTÉM: UM ARDUINO NANO, UM MOTOR DE VIBRAÇÃO E UM SENSOR ULTRASS�
 
 //CONSTANTES UTILIZADAS
 
-const int motorVibracao = 11; //variavel que controla o motor de vibracao
-const int pinoEcho = 8; //variavel que controla o pino echo do sensor ultrassônico (emite a onda)
-const int pinoTrig = 7; //variavel que controla o pino trig do sensor ultrasônico (recebe a onda)
+const int motorVibracao = 12; //variavel que controla o motor de vibracao
+const int pinoEcho = 11; //variavel que controla o pino echo do sensor ultrassônico (emite a onda)
+const int pinoTrig = 10; //variavel que controla o pino trig do sensor ultrasônico (recebe a onda)
 
 
 void setup() {
@@ -49,6 +49,7 @@ void inicializarSistema() {
   delayMicroseconds(2);
   digitalWrite(pinoTrig, 1);
   delayMicroseconds(10);
+  digitalWrite(motor vibração, 0);
 
   //lê a duracao do pulso (quanto tempo o Echo fica em estado HIGH)
   duracao = pulseIn(pinoEcho, 1);
